@@ -1,10 +1,10 @@
 # 实验二：创建第一个Android Kotlin #
 ## 一、创建模拟器 ##
 在androidstudio中选择虚拟模拟器，并下载相应的镜像
-![](./Kotlin/picture/1.PNG)
+![](./picture/1.PNG)
 
 创建虚拟器成功，虚拟机运行结果如下：
-![](./Kotlin/picture/2.PNG)
+![](./picture/2.PNG)
 ## 二、创建按钮并添加约束布局 ##
 在fragment_first中添加组件。三个按钮组件：toust_button、random_botton、count_button；一个textview：textview_first。
 
@@ -61,7 +61,7 @@
 
         android:textColor="@android:color/white"
 对于其他组件的背景颜色以及文字颜色进行相同的设置，呈现结果如下
-![](./Kotlin/picture/3.PNG)
+![](./picture/3.PNG)
 ## 四、按钮相应及交互 ##
 + 为toast按钮添加相应，在点击toast按钮后相应对应消息。toast按钮绑定相应事件，并编写相应
 
@@ -82,7 +82,7 @@
         view.findViewById<Button>(R.id.count_button).setOnClickListener {
             countMe(view)
         }
-![toast响应效果](./Kotlin/picture/toast.PNG)
+![toast响应效果](./picture/toast.PNG)
 +  为count按钮绑定响应事件，点击count按钮，count+1，先创建count+的方法，再在oncreatview中添加count按钮的响应
 
 private fun countMe(view: View) {
@@ -126,13 +126,13 @@ private fun countMe(view: View) {
             findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
 
         }
-![count++](./Kotlin/picture/count.PNG)
-![生成随机数](./Kotlin/picture/random.PNG)
+![count++](./picture/count.PNG)
+![生成随机数](./picture/random.PNG)
 #  #
 # 实验二.二：创建第一个Android Kotlin #
 ##  一、添加依赖 ##
 在gradle中添加camera所需要的的依赖
-![](./Kotlin/picture/gradle.PNG)
+![](./picture/gradle.PNG)
 
     dependencies {
           def camerax_version = "1.1.0-beta01"
@@ -175,10 +175,10 @@ private fun countMe(view: View) {
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent=".50" />
-![](./Kotlin/picture/%E5%B8%83%E5%B1%80.PNG)
+![](./picture/%E5%B8%83%E5%B1%80.PNG)
 ## 三、开启必要权限##
 在配置摄像头和录像以后需要请求用户允许开启摄影和录取声音的权限
-![](./Kotlin/picture/root.PNG)
+![](./picture/root.PNG)
 
     <uses-feature android:name="android.hardware.camera.any" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -367,7 +367,7 @@ private fun countMe(view: View) {
     }
 
 运行摄像:
-![](./Kotlin/picture/vidio.PNG)
+![](./picture/vidio.PNG)
 
 查看结果：
-![](./Kotlin/picture/end.PNG)
+![](./picture/end.PNG)
